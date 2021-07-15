@@ -1,0 +1,6 @@
+(library
+ (name app)
+ (wrapped false)
+ (libraries opium lwt lwt.unix caqti caqti-driver-postgresql caqti-lwt ezjsonm)
+ (preprocess
+  (pps lwt_ppx)))

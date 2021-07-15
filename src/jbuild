@@ -1,9 +1,0 @@
-(jbuild_version 1)
-
-(library
-  ((name app)
-   (wrapped false)
-   (libraries
-     (opium lwt lwt.unix
-      caqti caqti-driver-postgresql caqti-lwt))
-   (preprocess (pps (lwt.ppx)))))
