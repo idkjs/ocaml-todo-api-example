@@ -7,16 +7,17 @@ dev-repo:     "git+https://github.com/bobbypriambodo/tododb-ocaml.git"
 license:      "MIT"
 
 build: [
-  ["jbuilder" "subst" "-n" name] {pinned}
-  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["dune" "subst" "-n" name] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
 ]
-run-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
+run-test: [["dune" "runtest" "-p" name "-j" jobs]]
 
 depends: [
   "ocaml" { >= "4.04.2" }
-  "jbuilder" {build}
+  "dune" {build}
   "opium"
   "caqti"
+  "ezjsonm"
   "caqti-lwt"
   "caqti-driver-postgresql"
   "alcotest" {with-test}

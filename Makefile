@@ -1,14 +1,14 @@
 build:
-	jbuilder build @install --dev
+	dune build @install --dev
 
 run:
-	jbuilder exec tododb --dev
+	dune exec tododb --dev
 
 migrate:
-	jbuilder exec tododb_migrate --dev
+	dune exec tododb_migrate --dev
 
 rollback:
-	jbuilder exec tododb_rollback --dev
+	dune exec tododb_rollback --dev
 
 clean:
-	jbuilder clean
+	dune clean

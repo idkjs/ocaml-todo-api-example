@@ -14,11 +14,11 @@ $ opam install --deps-only tododb
 # Temporary until ezpostgresql is available in opam
 $ opam pin add ezpostgresql git+https://github.com/bobbypriambodo/ezpostgresql.git
 
-$ jbuilder build @install
+$ dune build @install
 
 # Migrate the database; make sure you have postgresql running
 # on localhost:5432
-$ jbuilder exec tododb_migrate
+$ dune exec tododb_migrate
 
-$ jbuilder exec tododb
+$ dune exec tododb
 ```
